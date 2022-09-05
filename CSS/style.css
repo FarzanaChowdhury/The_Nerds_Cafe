@@ -10,27 +10,33 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: #e3e3df;
 }
 
 .calender{
-width:45rem;
+width:60rem;
 height : 40rem;
-background-color: rgb(91, 179, 241);
+/* background-color: rgb(91, 179, 241); */
 display: flex;
 justify-content: center;
 align-items: center;
 }
 .month{
-    width : 80%;
+    width : 40rem;
     height : 80%;
     /* background-color: #02256a9c; */
     background-image: url('../Images/Blue-bg2.jpg');
     background-blend-mode: overlay;
+    box-shadow: 5px 5px 8px;
 }
 .month-name{
     /* background-color: #02246a; */
     text-align: center;
     color:#ffca56;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
 .dates{
     display :grid;
@@ -39,17 +45,17 @@ align-items: center;
     font-size: 25px;
     margin: 40px 30px;
     color: white;
-   
+   text-align: center;
 }
 .prev-date{
     color :#838381;
 }
-/* .events{
+#events{
     background-color: #02246a;
-    width : 150px;
-    height : 0;
-    /* display:none; 
-} */
+    width : 28rem;
+    height : 32rem;
+    display: none;
+}
 .sdate:hover{
     color:#ffca56;
     cursor : pointer;
@@ -58,4 +64,26 @@ align-items: center;
 .sdate:hover ~ .dates{
     transform:translateX(-300px);
 }
+input[type=text] {
+    border-bottom: 2px solid rgb(54, 54, 54);
+    background-color: #83838147;
+    color: #f7f7f7;
+    font-size: 2rem;
+    width: 90%;
+   margin: 8px;
+  }
+  input[type=submit]
+  {
+    background-color: #1106a7b8;
+    color: #e3e3df;
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 5px;
+    border: none;
+  }
+  input[type=text]:not(:focus){
+border:none;
+border-bottom: 2px solid rgb(85, 85, 85);
+background-color:#02246a ;
+  }
 

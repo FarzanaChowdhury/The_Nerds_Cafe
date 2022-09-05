@@ -15,10 +15,18 @@
         <div class="calender">
             <div class="month">              
                 <div class="month-name">
-                    <i class="fas fa-angle-left prev"></i>
-                    <h1 style="font-size:40px;">September</h1>
-                    <p>Saturday, Sepetember 3, 2022</p>
-                    <i class="fas fa-angle-right next"></i>
+                    <i class="fas fa-angle-left prev" style="font-size:30px"></i>
+                    <div class="t-date">
+                        <h1 style="font-size:40px;"></h1>
+                    <p><span id="day"></span>, 
+                        <span id="m"></span> 
+                        <span id="d"></span>, 
+                        <span id="year"></span>
+                    </p>
+
+                    </div>
+                    
+                    <i class="fas fa-angle-right next" style="font-size:30px"></i>
                 </div>
                 <div class ="dates">
                     <div>Sun</div>
@@ -66,8 +74,9 @@
                <div class="sdate">30</div>
             </div>
             </div>
-            <div class="events">
-            
+            <div id="events">
+           <input id="write" type="text" placeholder="Add Event">
+           <input id="sub" type="submit" value="save">
             </div>
         </div>
     </div>
