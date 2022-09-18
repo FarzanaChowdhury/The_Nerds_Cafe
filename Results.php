@@ -39,7 +39,7 @@ if(isset($_FILES['excel']['name']))
 }
     if($i==0)
     {
-        $sql_query="CREATE TABLE ".$excel->sheetname(0)." (".rtrim($q,",").");";
+        $sql_query="CREATE OR REPLACE TABLE ".$excel->sheetname(0)." (".rtrim($q,",").");";
     }
     else
     {
@@ -47,16 +47,42 @@ if(isset($_FILES['excel']['name']))
     }
     if(mysqli_query($conn,$sql_query))
     {
-        echo "true";
+
     }
     $i++;
-    echo $sql_query; 
-    echo'<br>';
+
     
     }
-  
+
+
+    $qq="SELECT * FROM ". $excel->sheetname(0).";";
+
+    $s_query=mysqli_query($conn,$qq);
  
+    echo'<table border=2>';
+    echo'<caption>';echo $excel->sheetname(0); echo'</caption>';
+    echo'<tr>';
+    echo'<th>'; echo "Student ID"; echo'</th>';
+    echo'<th>'; echo "Marks"; echo'</th>';
+    echo'<th>'; echo "Grade"; echo'</th>';
+    echo'</tr>';
+
+    while ($row = mysqli_fetch_array($s_query))
+   {
+        echo'<tr>';
+        echo'<td>'; echo $row[0]; echo'</td>';
+        echo'<td>'; echo $row[1];echo'</td>';
+        echo'<td>'; echo $row[2];echo'</td>';
+        echo'</tr>';
+
+
+   }
+        echo'</table>';
 
 }
+
+
+
+
 ?>
 </html>

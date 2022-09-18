@@ -38,10 +38,6 @@ else{
 } 
 
 }
-else if(!isset($_POST['add']))
-{
-   echo"Hello";
-}
 else
 {
     echo"Enter Course code";
