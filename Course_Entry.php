@@ -1,4 +1,5 @@
 <?php
+
 $server_name="localhost";
 $username="root";
 $password="";
@@ -41,3 +42,5 @@ else
 {
     echo"Enter Course code";
 }
+include "Results.php";
+?>
