@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- <link rel="stylesheet" href="CSS/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="calender">
+            <div class="month">
+                <div class="month-name">
+                    <i class="fas fa-angle-left prev" style="font-size:30px"></i>
+                    <div class="t-date">
+                        <h1 style="font-size:40px;"></h1>
+                        <p><span id="day"></span>,
+                            <span id="m"></span>
+                            <span id="d"></span>,
+                            <span id="year"></span>
+                        </p>
+
+                    </div>
+
+                    <i class="fas fa-angle-right next" style="font-size:30px"></i>
+                </div>
+
+                <div class="days">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+
+                <div class="dates"></div>
+
+
+            </div>
+            <div id="events">
+                <i class="fa-solid fa-xmark" id="close"></i>
+                <form name="addEvents" action="addEvent.php" method="get">
+                    <input id="write" type="text" placeholder="Add Event">
+                    <input id="Save" type="submit" value="save">
+                    <input id="remove" type="reset" value="Delete">
+                </form>
+            </div>
+        </div>
+        <script src="JS/calender.js"></script>
+        <script src="JS/calenderEvents.js"></script>
+</body>
+
+</html>
