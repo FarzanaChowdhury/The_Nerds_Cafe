@@ -32,6 +32,7 @@ if(isset($_POST['save']))
 	 if (mysqli_query($conn, $sql_query)) 
 	 {
 		echo "New Details Entry inserted successfully !";
+		readfile('index.html');
 	 } 
 	 else
      {
